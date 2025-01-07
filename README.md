@@ -80,7 +80,7 @@ Before you begin, ensure that you have met the following requirements:
    npm start
    ```
 
-   This will start the server on `http://localhost:3000`.
+   This will start the server on `http://<IP_Address>:3000`.
 
 2. **Verify the server is running:**
 
@@ -98,5 +98,10 @@ Before you begin, ensure that you have met the following requirements:
 
  ###  CURL Command:
 ```bash
-curl -X POST http://<public ip>/identify -H "Content-Type: application/json" -d '{"email": "demo@example.com", "phoneNumber": "123-456-7890"}'
+curl -X POST http://<public ip>:3000/identify -H "Content-Type: application/json" -d '{"email": "demo@example.com", "phoneNumber": "123-456-7890"}'
+```
+
+## example
+```bash
+curl -X POST http://3.80.83.67:3000/identify -H "Content-Type: application/json" -d '{"email": "manjuappu1375@gmail.com", "phoneNumber": "9019631922"}'
 ```
