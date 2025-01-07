@@ -96,57 +96,7 @@ Before you begin, ensure that you have met the following requirements:
    Welcome to the Emotorad Backend Task API
    ```
 
-## API Endpoints
-
-### 1. **POST /identify**
-
-#### Request Body
-
-The request body should contain either an email or a phone number (or both). Here's an example:
-
-```json
-{
-  "email": "john.doe@example.com",
-  "phoneNumber": "123-456-7890"
-}
+ ###  CURL Command:
+```bash
 ```
-
-#### Response
-
-- **200 OK**: A JSON object containing the primary contact ID, emails, phone numbers, and secondary contact IDs.
-
-Example response:
-
-```json
-{
-  "primaryContactId": 1,
-  "emails": ["john.doe@example.com", "secondary.email@example.com"],
-  "phoneNumbers": ["123-456-7890", "987-654-3210"],
-  "secondaryContactIds": [2, 3]
-}
-```
-
-- **500 Internal Server Error**: If there is an error processing the request, you will receive a response like this:
-
-```json
-{
-  "error": "An error occurred while processing the request."
-}
-```
-
-## Database
-
-The project uses SQLite for data storage. The SQLite database is created automatically when you run the application for the first time. The database file is stored in the project directory as `database.sqlite`.
-
-### Database Schema
-
-The `Contact` table has the following columns:
-
-- `id`: Primary key, auto-incremented integer.
-- `phoneNumber`: The contact's phone number (optional).
-- `email`: The contact's email address (optional).
-- `linkedId`: Foreign key linking secondary contacts to primary contacts (optional).
-- `linkPrecedence`: Enum value (`primary` or `secondary`) indicating whether the contact is primary or secondary.
-- `createdAt`: Timestamp when the contact was created.
-- `updatedAt`: Timestamp when the contact was last updated.
-- `deletedAt`: Timestamp when the contact was deleted (optional).
+curl -X POST http://<public ip>/identify -H "Content-Type: application/json" -d '{"email": "demo@example.com", "phoneNumber": "123-456-7890"}'
