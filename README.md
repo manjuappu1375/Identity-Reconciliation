@@ -98,5 +98,5 @@ Before you begin, ensure that you have met the following requirements:
 
  ###  CURL Command:
 ```bash
-```
 curl -X POST http://<public ip>/identify -H "Content-Type: application/json" -d '{"email": "demo@example.com", "phoneNumber": "123-456-7890"}'
+```
