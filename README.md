@@ -1,9 +1,9 @@
 Sure! Here’s the complete `README.md` file in a single block of code for your GitHub repository:
 
 ```markdown
-# Emotorad Backend Task
+# Identity-Reconciliation
 
-This is a backend application for Emotorad that uses SQLite and Sequelize ORM to manage contacts. The server is built using Express.js and handles endpoints to identify and manage contacts based on email and phone number.
+This is a backend application for Identity-Reconciliationthat uses SQLite and Sequelize ORM to manage contacts. The server is built using Express.js and handles endpoints to identify and manage contacts based on email and phone number.
 
 ## Prerequisites
 
@@ -93,7 +93,7 @@ Before you begin, ensure that you have met the following requirements:
    You should receive the following response:
 
    ```
-   Welcome to the Emotorad Backend Task API
+   Welcome to the Identity-Reconciliation API
    ```
 
  ###  CURL Command:
